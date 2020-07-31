@@ -12,6 +12,6 @@ The server will be up and running on your local machine. Navigate to the link us
 
 On pressing "Log In", You will be redirected to an error page which is made on purpose which will fool the victim on thinking that something went wrong.
 
-The id password will be stored in a facebook.db file in the root directory.
+The id password will be stored in a file called facebook.db in the root directory.
 
 THIS APP IS MADE FOR EDUCATIONAL PURPOSES ONLY.
